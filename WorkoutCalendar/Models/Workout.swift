@@ -7,34 +7,17 @@
 
 import Foundation
 
-import SwiftUI
-import Charts
-
-// MARK: - Models/Workout.swift
-
-struct Workout: Identifiable, Codable {
-    let id: String
-    let activityType: WorkoutType
-    let startDate: Date
+struct Workout: Codable, Identifiable, Equatable {
+    let workoutKey: String
+    let workoutActivityType: WorkoutType
+    let workoutStartDate: String
     
-    enum CodingKeys: String, CodingKey {
-        case id = "workoutKey"
-        case activityType = "workoutActivityType"
-        case startDate = "workoutStartDate"
-    }
+    var id: String { workoutKey }
     
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(String.self, forKey: .id)
-        
-        let typeString = try container.decode(String.self, forKey: .activityType)
-        activityType = WorkoutType(rawValue: typeString) ?? .other
-        
-        let dateString = try container.decode(String.self, forKey: .startDate)
+    var startDate: Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        startDate = formatter.date(from: dateString) ?? Date()
+        return formatter.date(from: workoutStartDate) ?? Date()
     }
 }
 
@@ -44,27 +27,14 @@ enum WorkoutType: String, Codable {
     case water = "Water"
     case cycling = "Cycling"
     case strength = "Strength"
-    case other = "Other"
     
-    var icon: String {
+    var emoji: String {
         switch self {
-        case .walkingRunning: return "figure.run"
-        case .yoga: return "figure.yoga"
-        case .water: return "figure.open.water.swim"
-        case .cycling: return "bicycle"
-        case .strength: return "dumbbell.fill"
-        case .other: return "figure.mixed.cardio"
-        }
-    }
-    
-    var color: Color {
-        switch self {
-        case .walkingRunning: return .blue
-        case .yoga: return .purple
-        case .water: return .cyan
-        case .cycling: return .green
-        case .strength: return .orange
-        case .other: return .gray
+        case .walkingRunning: return "🏃"
+        case .yoga: return "🧘"
+        case .water: return "🏊"
+        case .cycling: return "🚴"
+        case .strength: return "💪"
         }
     }
     
@@ -72,10 +42,9 @@ enum WorkoutType: String, Codable {
         switch self {
         case .walkingRunning: return "Бег/Ходьба"
         case .yoga: return "Йога"
-        case .water: return "Вода"
-        case .cycling: return "Велосипед"
+        case .water: return "Плавание"
+        case .cycling: return "Велоспорт"
         case .strength: return "Силовая"
-        case .other: return "Другое"
         }
     }
 }

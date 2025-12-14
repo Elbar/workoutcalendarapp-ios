@@ -8,8 +8,10 @@ SwiftUI приложение для отображения календаря т
 
 <img width="500" height="auto" alt="Simulator Screenshot - iPhone 16 Pro - 2025-12-14 at 13 27 41" src="https://github.com/user-attachments/assets/63d4d2b0-2491-4bff-baa4-615d5889b738" />
 
+<img width="500" height="auto" alt="Simulator Screenshot - iPhone 16 Pro - 2025-12-14 at 13 50 44" src="https://github.com/user-attachments/assets/19147cd1-1317-4d2b-8a70-d3e5f0e9b03b" />
 
-<img  width="500" height="auto" alt="Simulator Screenshot - iPhone 16 Pro - 2025-12-14 at 13 29 02" src="https://github.com/user-attachments/assets/c69a52c9-f9d1-4409-8ebf-628390654c4b" />
+<img width="500" height="auto" alt="Simulator Screenshot - iPhone 16 Pro - 2025-12-14 at 13 51 27" src="https://github.com/user-attachments/assets/1a501ff9-c873-46b3-b017-74ac424c4d45" />
+
 
 
 ## 📋 Требования

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Workout: Codable, Identifiable, Equatable {
+struct Workout: Codable, Identifiable, Hashable {
     let workoutKey: String
     let workoutActivityType: WorkoutType
     let workoutStartDate: String

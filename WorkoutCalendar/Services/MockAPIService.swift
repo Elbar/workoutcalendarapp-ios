@@ -14,15 +14,15 @@ class MockAPIService {
     func loadWorkouts() -> [Workout] {
         let jsonString = """
         [
-            {"workoutKey": "7823456789012345", "workoutActivityType": "Walking/Running", "workoutStartDate": "2025-11-25 09:30:00"},
-            {"workoutKey": "7823456789012346", "workoutActivityType": "Yoga", "workoutStartDate": "2025-11-25 18:00:00"},
-            {"workoutKey": "7823456789012347", "workoutActivityType": "Water", "workoutStartDate": "2025-11-24 07:15:00"},
-            {"workoutKey": "7823456789012348", "workoutActivityType": "Walking/Running", "workoutStartDate": "2025-11-24 17:45:00"},
-            {"workoutKey": "7823456789012349", "workoutActivityType": "Cycling", "workoutStartDate": "2025-11-23 10:00:00"},
-            {"workoutKey": "7823456789012350", "workoutActivityType": "Walking/Running", "workoutStartDate": "2025-11-22 08:30:00"},
-            {"workoutKey": "7823456789012351", "workoutActivityType": "Yoga", "workoutStartDate": "2025-11-22 19:00:00"},
-            {"workoutKey": "7823456789012352", "workoutActivityType": "Water", "workoutStartDate": "2025-11-21 06:45:00"},
-            {"workoutKey": "7823456789012353", "workoutActivityType": "Strength", "workoutStartDate": "2025-11-21 16:30:00"}
+            {"workoutKey": "7823456789012345", "workoutActivityType": "Walking/Running", "workoutStartDate": "2025-12-11 09:30:00"},
+            {"workoutKey": "7823456789012346", "workoutActivityType": "Yoga", "workoutStartDate": "2025-12-12 18:00:00"},
+            {"workoutKey": "7823456789012347", "workoutActivityType": "Water", "workoutStartDate": "2025-12-12 07:15:00"},
+            {"workoutKey": "7823456789012348", "workoutActivityType": "Walking/Running", "workoutStartDate": "2025-12-13 17:45:00"},
+            {"workoutKey": "7823456789012349", "workoutActivityType": "Cycling", "workoutStartDate": "2025-12-13 10:00:00"},
+            {"workoutKey": "7823456789012350", "workoutActivityType": "Walking/Running", "workoutStartDate": "2025-12-14 08:30:00"},
+            {"workoutKey": "7823456789012351", "workoutActivityType": "Yoga", "workoutStartDate": "2025-12-14 19:00:00"},
+            {"workoutKey": "7823456789012352", "workoutActivityType": "Water", "workoutStartDate": "2025-12-15 06:45:00"},
+            {"workoutKey": "7823456789012353", "workoutActivityType": "Strength", "workoutStartDate": "2025-12-15 16:30:00"}
         ]
         """
         

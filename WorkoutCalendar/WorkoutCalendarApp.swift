@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct WorkoutCalendarApp: App {
-    let persistenceController = PersistenceController.shared
-
+    @StateObject private var coordinator = AppCoordinator()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            CalendarView()
+                .environmentObject(coordinator)
         }
     }
 }
